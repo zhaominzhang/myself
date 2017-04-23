@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEMO</title>
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body> 
+    <div class="services">
+        <h3>DEMO</h3>
+        <div class="items_left" >
+            <div class="clock" id="clock">
+                <img src="images/clock.png" alt=""   id="items_left"/>
+                <div class="h" id="hour">
+                    <img src="images/hour.png" alt="" />
+                </div>
+                <div class="m" id="minute">
+                    <img src="images/minute.png" alt="" />
+                </div>
+                <div class="s" id="second">
+                    <img src="images/second.png" alt="" />
+                </div>
+            </div> 
+        </div>
+        <div class="items_right"> 
+            <div class="all" id='all'>
+            <div class="screen">
+                <ul id="ul">
+                    <li><img src="images/1.jpg" width="500" height="200" /></li>
+                    <li><img src="images/2.jpg" width="500" height="200" /></li>
+                    <li><img src="images/3.jpg" width="500" height="200" /></li>
+                    <li><img src="images/4.jpg" width="500" height="200" /></li>
+                    <li><img src="images/5.jpg" width="500" height="200" /></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="big_box">
+        <div class="box" id="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <button id="btnone">START</button>
+            <button id="btntwo">END</button>
+        </div>
+    </div>
+    <div class="footer" id="moveTop">
+    </div>
+</body>
+<script src="js/move.js"></script>
+<script src="js/top.js"></script>
+<script>
+    // 时钟拖动
+    var key = document.getElementById('items_left');
+    var clock = document.getElementById('clock');
+    startDrop(items_left,clock);
+    function startDrop(current,move) {
+        current.onmousedown=function(event){
+            var event=event||window.event;
+            var x = event.clientX - move.offsetLeft ;
+
+            var y = event.clientY - move.offsetTop ;
+            document.onmousemove=function(event){
+                var event=event||window.event;
+                move.style.left=event.clientX - x + "px";
+                move.style.top=event.clientY - y + "px";
+                window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
+            }
+        }
+            document.onmouseup=function(){
+                document.onmousemove=null;
+        }
+    }
+</script>
+ <script>
+    var box = document.getElementById('box');
+    var div = box.getElementsByTagName('div');
+    var btnone = document.getElementById('btnone');
+    var btntwo = document.getElementById('btntwo');
+    console.log(div);
+    var colors=['red','plum','blue','green','cyan','black','pink','gray','brown'];
+    btnone.onclick=function(){//点击开始
+        timer=setInterval(function(){//使用定时器
+        start();//调用函数
+        },100)//设置时间
+    }
+    
+    btntwo.onclick=function(){//停止按钮的
+        for(i=0;i<div.length;i++){//循环
+            div[i].style.background="#FFA600";//遍历清除颜色
+        }
+        clearInterval(timer);//停止定时器
+    }
+    function start(){
+        for(var i=0;i<div.length;i++){//每次随机颜色时遍历将背景设置好
+            div[i].style.background="#FFA600";
+        }
+        var arr=new Array(3);//创建数组容纳随机数
+        var arr1=new Array(3);
+        for(var i=0;i<arr.length;i++){//创建第一组数组
+            var a=parseInt(Math.random()*9); 
+            // console.log(a);
+            if(i==0){//第一个数字直接导入数组
+                arr[i]=a;
+            }else{
+                for(var j=0;j<i;j++){//第二个与第三个数字进行判断
+                    if(a==arr[j]){//如果重复从新开始
+                        i--;
+                    }else{
+                        arr[i]=a;
+                    }
+                }
+            }
+        }
+        for(var i=0;i<arr1.length;i++){//同上。随机颜色
+            var a=parseInt(Math.random()*9); 
+            if(i==0){
+                arr1[i]=a;
+            }else{
+                for(var j=0;j<i;j++){
+                    if(a==arr1[j]){
+                        i--;
+                        }else{
+                        arr1[i]=a;
+                        }
+                }
+            }
+        }
+        for(var i=0;i<arr.length;i++){
+            div[arr[i]].style.background=colors[arr1[i]];//将随机的颜色给随机的地址
+        }
+    }
+ </script>
+</html>

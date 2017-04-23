@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="nav">
+        <div class="nav_left">
+            <p><span>R</span>ESUME</p>
+        </div>
+        <div class="nav_right">
+            <ul>
+                <li><a href="#">ME</a></li>
+                <li><a href="javascript:;" id="goto">ABILITY</a></li>
+                <li><a href="index1.html" target="blank">DEMO</a></li>
+                <li><a href="right.html" target="blank">LIFE</a></li>
+                <li><a href="#">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <h1>
+                hi!
+            </h1>
+            <h3>Web&前端开发</h3>
+            <br />
+            <hr />
+            <br />
+            <ul class="selftext">
+                <li>
+                    <ul>
+                        <li><b>NAME / 姓名</b></li>
+                        <li>I'M Zhaomin Zhang</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><b>BORN / 出生日期</b></li>
+                        <li>11-05-1996</li>
+                    </ul>
+                </li>
+                 <li>
+                    <ul>
+                        <li><b>AGE / 年龄</b></li>
+                        <li>21</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><b>TELEPHONE / 移动电话</b></li>
+                        <li>13129906330</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><b>E-MAil / 电子邮箱</b></li>
+                        <li>zhaomin.zhang@foxmail.com</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li><b>ADRESS / 住址</b></li>
+                        <li>wuhan,Hubei Province</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main_right">
+                <img src="images/self.jpg" alt="" />
+        </div>
+    </div>
+    <div class="skill">
+        <div class="skill_left" id="scroll">
+           <!--      <img src="images/pic1.jpg" alt="" />
+                <img src="images/pic2.jpg" alt="" /> -->
+                <img src="images/pic3.jpg" alt="" />
+        </div>
+
+        <div class="skill_right">
+            <div class="content">
+                <h3>Self Assessment</h3>
+                <p>1.本人热衷于网页设计，对前端有浓厚的学习兴趣，对网页响应式设计和UI设计有一定的了解.</p>
+                <p>2.能够运用Div + CSS进行网页的排版和设计.</p>
+                <p>3.对JavaScript有一定的编写能力，有良好的编码习惯.</p>
+                <p>4.能使用原生js以及会使用jQuery框架来进行简单页面交互，能根据需求完成可用性、良好交互性和用户体验的网页.</p>
+                <p>5.熟练使用HTML标记、div+css+javascript操作等前端WEB技术进行网站的开发与制造.  </p>  
+            </div>                                  
+        </div>
+    </div>
+    <div class="footer" id="moveTop">
+    </div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/top.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".nav_right ul>li:eq(0)").on("click",function(){
+            // console.log(123);
+            $(document).scrollTop();
+        });
+        $(".nav_right ul>li:eq(1)").on("click",function(){
+            $(document).scrollTop(640);
+        });
+    });
+</script>
+</html>

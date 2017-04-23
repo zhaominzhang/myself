@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>LIFE</title>
+<link href="css/css.css" type="text/css" rel="stylesheet" />
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+   $(function() {
+       var timer = null;
+       $(".box").hover(function() {
+              clearTimeout(timer);
+             timer = setTimeout(function() {
+                    $(".box").find("a").each(function(index,el){
+                           // console.log(index);
+                           setTimeout(function() {
+                                  $(el).stop().animate({"right":0},300);
+                           },50*index);
+                    })
+             },200)
+       }, function() {
+              if(timer){
+                     clearTimeout(timer);
+              }
+              $(this).find("a").each(function(index,el) {
+                     setTimeout(function(){
+                            $(el).stop().animate({"right":-110},300)
+                     },50*index);
+              })
+       })
+       $(".ball").on('mouseenter',function(){
+        // $(this).css({
+        //   "animation":"move 5s infinite"
+        // });
+         $(this).addClass("hover");
+       }).on('mouseleave',function(){
+        // $(this).css({
+        //   "animation":"move 1.5s infinite"
+        // });
+        $(this).removeClass("hover");
+       });
+   })
+</script>
+</head>
+<body>
+<div class="box">
+       <a href='#'><span>0</span>Wafture</a>
+       <a href='#'><span>1</span>Sumptuous</a>
+       <a href='#'><span>2</span>Scintilla</a>
+       <a href='#'><span>3</span>Propinquity</a>
+       <a href='#'><span>4</span>Harbinger</a>
+       <a href='#'><span>5</span>Lassitude</a>
+       <a href='#'><span>6</span>Murmurous</a>
+       <a href='#'><span>7</span>Palimpsest</a>
+       <a href='#'><span>8</span>Ineffable</a>
+       <a href='#'><span>9</span>Mellifluous</a>
+       <a href='#'><span>10</span>Woebegone</a>
+       <a href='#'><span>11</span>Sumptuous</a>
+       <a href='#'><span>12</span>Lassitude</a>
+</div>
+<div></div>
+<div class="ball">
+</div>
+</body>
+</html>

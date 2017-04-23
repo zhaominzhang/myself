@@ -1,0 +1,102 @@
+﻿@charset "utf-8";
+* {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+a, img {
+	border:0;
+	text-decoration:none;
+}
+body {
+	font:12px/180% Arial, Helvetica, sans-serif, "新宋体";
+	background:#232323;
+}
+
+.box {
+	position:fixed;
+	top:0;
+	right:0;
+	z-index:9999;
+	width:140px;
+	cursor:pointer;
+	margin:100px 0 0 0;
+}
+*html, *html body /* 修正IE6振动bug */ {
+	background-image:url(about:blank);
+	background-attachment:fixed;
+}
+*html .box {
+	position:absolute;
+    /*获取当前页面滚动条所滚动到的位置的数值，而再用eval()函数把它计算成数值。*/
+    /*浏览器窗口的滚动条滑到哪，这个元素的位置就在哪*/
+    top:expression(eval(document.documentElement.scrollTop));
+}
+.box a {
+	display:block;
+	position:relative;
+	height:30px;
+	line-height:30px;
+	margin-bottom:2px;
+	background:#fff;
+	padding-right:10px;
+	width:130px;
+	overflow:hidden;
+	color:#333;
+	cursor:pointer;
+	right:-110px;
+    border-radius:50px 0px 0px 50px;
+}
+.box a:hover {
+	text-decoration:none;
+	color:#1974A1;
+}
+.box a:hover span {
+	background:#5FA429
+}
+.box a span {
+	display:block;
+	float:left;
+	width:30px;
+	background:#636871;
+	color:#fff;
+	font-size:16px;
+	text-align:center;
+	margin-right:10px;
+	font-style:normal;
+}
+.ball{
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        border-radius: 100px;
+        background-color: #251726;
+        background-image: radial-gradient(140px at center 40px,yellow,rgba(181,251,26,0.6));
+        position: absolute;
+        left:50%;
+        top:30px;
+        animation:move 1.5s infinite;
+    }
+.hover{
+        width: 200px;
+        height: 200px;
+        margin-left: -100px;
+        border-radius: 100px;
+        background-color: #251726;
+        background-image: radial-gradient(140px at center 40px,white,gray);
+        position: absolute;
+        left:50%;
+        top:30px;
+        animation:move 5s infinite;
+    }
+@keyframes move{
+        0%{
+            top:30px;
+        }
+        50%{
+            top:200px;
+        }
+        100%{
+            top:30px;
+        }
+    }
