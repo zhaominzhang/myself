@@ -50,6 +50,10 @@ body{
     padding-top: 30px;
     margin-right: 10px;
 }
+.nav_right h1{
+    color:#FFF;
+    text-align: right;
+}
 .nav ul{
     width:100%;
     height: 100%;
