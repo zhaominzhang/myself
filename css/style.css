@@ -222,7 +222,7 @@ h1:before {
 }
 .skill_right .content{
     padding:20px;
-    background-color:#454545;
+    background:rgba(47,44,44,0.75);
     position: relative;
 }
 .skill_right .content h3{
@@ -241,41 +241,10 @@ h1:before {
     letter-spacing: 1px;
     padding: 8px;
 }   
-@media screen and (min-width:1300px) {
-.skill_right .content p{ 
-    font-size:1.2em;
-    padding: 8px;
-}
-.skill_right .content h3{padding:1.5em;}
-}
-@media screen and (max-width:1020px) {
-    .skill_right{
-        width: 100%;
-        position: static;
-    }
-    .skill_left {
-        width: 50%;
-        height: 95%;
-}
-    .skill_left img{
-        width: 100%;
-    }
-    .skill_right .content{
-        width:100%;
-    }
-}
-@media screen and (max-width:720px) {
-    .skill_left img {
-        width: 60%;
-}
-    .skill_left {
-        width: 50%;
-        height: 70%;
-    }
-}
+
 .project{
     height: 600px;
-    background-color: #454545;
+    background:rgba(47,44,44,0.58);
     text-align: center;
 }
 .pro_left,
@@ -283,20 +252,23 @@ h1:before {
     color:#fff;
 }
 .pro_left{
-    width: 50%;
-    float: left;
-    padding:100px 0;
+    width: 100%;
+    padding:70px 0;
 }
 .pro_right{
-    width: 50%;
-    float: right;
+    margin:0 40px;
     letter-spacing: 2px;
+    padding: 10px 100px;
     text-align: left;
+    background:rgba(47,44,44,0.75);
+
 }
 .pro_right .block{
     padding:10px 0px;
+    margin-bottom: 50px;
 }
-.pro_right label{
+.block label,
+.pro_btm label{
     padding-right: 5px;
     color:#CCC;
 }
@@ -319,6 +291,12 @@ h1:before {
 .pro_right a:active{
     font-size: 25px;
     color:#1D4B6B;
+}
+.pro_demo {
+    margin:0 40px;
+}
+.pro_demo table{
+    border:1px solid gray;
 }
 #moveTop{
     width: 35px;
