@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="utf-8" />
     <title>时钟</title>
     <style>
     *{ padding:0; margin:0; list-style:none; border:0;}
@@ -46,22 +46,5 @@
         <div class="s" id="second"></div>
     </div>    
 </body>
-<script>
-   // 时钟旋转
-    var hour=document.getElementById('hour');
-    var minute=document.getElementById('minute');
-    var second=document.getElementById('second');
-    var h=0,m=0,s=0,ms=0;
-    setInterval(function (){
-        var date=new Date();
-        ms=date.getMilliseconds();
-        s=date.getSeconds() + ms / 1000;
-        m=date.getMinutes() + s / 60;
-        h=date.getHours() % 12 + m / 60;
-        // console.log(h);
-        second.style.WebkitTransform="rotate("+s*6+"deg)";
-        minute.style.WebkitTransform="rotate("+m*6+"deg)";
-        hour.style.WebkitTransform="rotate("+h*30+"deg)";
-        },1);
-</script>
+<script src="js/clock.js"></script>
 </html>

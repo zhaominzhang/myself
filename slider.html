@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <title>SLIDER</title>
 <style type="text/css">
-*{ padding:0; margin:0; list-style:none; border:0;}
-body{
-    width: 100%;
-    height: 100%;
-    background-color: #320E23;
-}
-.all{
-    width:500px;
-    height:200px;
-    padding:7px;
-    margin:100px auto;
-    position:relative;
-}
-.screen{
-    width:500px;
-    height:200px;
-    overflow:hidden; 
-    position:relative;
-}
-
-.screen li{
-    width:500px;
-    height:200px;
-    overflow:hidden;
-    float:left;
-}
-.screen ul{ 
-    position:absolute;
-    left:0; top:0px;
-    width:3000px;
-  }
-.all ol{ 
-    position:absolute;
-    right:10px; 
-    bottom:10px; 
-    line-height:20px; 
-    text-align:center;
- }
-.all ol li{ 
-    float:left;
-    width:20px; 
-    height:20px;
-    background:#fff;
-    border:1px solid #ccc; 
-    margin-left:10px; 
-    border-radius: 50%;
-    cursor:pointer;}
-.all ol li.current{ 
-    background:yellow;
-}
+    *{ padding:0; margin:0; list-style:none; border:0;}
+    body{
+        width: 100%;
+        height: 100%;
+        background-color: #320E23;
+    }
+    .all{
+        width:500px;
+        height:200px;
+        padding:7px;
+        margin:100px auto;
+        position:relative;
+    }
+    .screen{
+        width:500px;
+        height:200px;
+        overflow:hidden; 
+        position:relative;
+    }
+    
+    .screen li{
+        width:500px;
+        height:200px;
+        overflow:hidden;
+        float:left;
+    }
+    .screen ul{ 
+        position:absolute;
+        left:0; top:0px;
+        width:3000px;
+      }
+    .all ol{ 
+        position:absolute;
+        right:10px; 
+        bottom:10px; 
+        line-height:20px; 
+        text-align:center;
+     }
+    .all ol li{ 
+        float:left;
+        width:20px; 
+        height:20px;
+        background:#fff;
+        border:1px solid #ccc; 
+        margin-left:10px; 
+        border-radius: 50%;
+        cursor:pointer;}
+    .all ol li.current{ 
+        background:yellow;
+    }
 
 </style>
-<script src="js/move.js"></script>
 </head>
 <body>
 <div class="all" id='all'>
