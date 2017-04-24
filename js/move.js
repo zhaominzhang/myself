@@ -1,23 +1,4 @@
 
-        // 实现时钟效果
-    var hour=document.getElementById('hour').getElementsByTagName('img')[0];
-    var minute=document.getElementById('minute').getElementsByTagName('img')[0];
-    var second=document.getElementById('second').getElementsByTagName('img')[0];
-    var h=0,m=0,s=0,ms=0;
-    setInterval(function (){
-        var date=new Date();
-        ms=date.getMilliseconds();
-        s=date.getSeconds() + ms / 1000;
-        m=date.getMinutes() + s / 60;
-        h=date.getHours() % 12 + m / 60;
-        // console.log(h);
-        second.style.WebkitTransform="rotate("+s*6+"deg)";
-        minute.style.WebkitTransform="rotate("+m*6+"deg)";
-        hour.style.WebkitTransform="rotate("+h*30+"deg)";
-        },1);
-
-
-
     function animate(obj,target){
         clearInterval(obj.timer);  // 先清除定时器
         var speed = obj.offsetLeft < target ? 15 : -15;  // 用来判断 应该 +  还是 -

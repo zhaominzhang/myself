@@ -272,31 +272,46 @@ h1:before {
     padding-right: 5px;
     color:#CCC;
 }
-.pro_right a{
+.pro_right a,
+.pro_demo a{
     text-decoration: none;
     color:#fff;
 }
-.pro_right a:link{
+.pro_right a:link,
+.pro_demo a:link{
     font-size: 18px;
     color:green;
 }
-.pro_right a:visited{
-    font-size: 20px;
+.pro_right a:visited,
+.pro_demo a:visited{
     color:green;
 }
-.pro_right a:hover{
-    font-size: 20px;
-    color:green;
+.pro_right a:hover,
+.pro_demo a:hover{
+    color:#0B00D7;
 }
-.pro_right a:active{
-    font-size: 25px;
+.pro_right a:active,
+.pro_demo a:active{
     color:#1D4B6B;
 }
 .pro_demo {
-    margin:0 40px;
+    background:rgba(47,44,44,0.58);
+    padding: 50px 250px;
+    margin: 80px auto;
 }
 .pro_demo table{
-    border:1px solid gray;
+    width:500px;
+    height: 30px;
+    background:rgba(47,44,44,0.75);
+    line-height: 30px;
+}
+.pro_demo table th,
+.pro_demo table td{
+    height: 50px;
+    font-size: 25px;
+}
+.pro_demo table th{
+    color:#CDCDCD;
 }
 #moveTop{
     width: 35px;
