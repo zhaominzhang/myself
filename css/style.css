@@ -273,25 +273,30 @@ h1:before {
     color:#CCC;
 }
 .pro_right a,
-.pro_demo a{
+.pro_demo a,
+.content a{
     text-decoration: none;
     color:#fff;
 }
 .pro_right a:link,
-.pro_demo a:link{
+.pro_demo a:link,
+.content a:link{
     font-size: 18px;
     color:green;
 }
 .pro_right a:visited,
-.pro_demo a:visited{
+.pro_demo a:visited,
+.content a:visited{
     color:green;
 }
 .pro_right a:hover,
-.pro_demo a:hover{
+.pro_demo a:hover,
+.content a:hover{
     color:#0B00D7;
 }
 .pro_right a:active,
-.pro_demo a:active{
+.pro_demo a:active,
+.content a:active{
     color:#1D4B6B;
 }
 .pro_demo {
