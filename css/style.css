@@ -243,7 +243,6 @@ h1:before {
 }   
 
 .project{
-    height: 600px;
     background:rgba(47,44,44,0.58);
     text-align: center;
 }
@@ -264,9 +263,14 @@ h1:before {
 
 }
 .pro_right .block{
-    padding:10px 0px;
+    padding:20px 0px;
     margin-bottom: 50px;
 }
+.pro_right .pro_prev,
+.pro_right .pro_next{
+    margin:50px 0px;
+}
+
 .block label,
 .pro_btm label{
     padding-right: 5px;
@@ -300,9 +304,9 @@ h1:before {
     color:#1D4B6B;
 }
 .pro_demo {
-    background:rgba(47,44,44,0.58);
+    background:rgba(47,44,44,0);
     padding: 50px 250px;
-    margin: 80px auto;
+    margin: 90px auto;
 }
 .pro_demo table{
     width:500px;
@@ -318,6 +322,7 @@ h1:before {
 .pro_demo table th{
     color:#CDCDCD;
 }
+
 #moveTop{
     width: 35px;
     height: 35px;
